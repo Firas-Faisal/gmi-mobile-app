@@ -1,0 +1,152 @@
+import 'package:get/get.dart';
+
+class DiplomaController extends GetxController {
+  // Reactive selected category using RxString
+  var selectedCategory = 'ELECTRICAL'.obs;
+
+  // Courses data
+  final Map<String, List<Map<String, String>>> courses = {
+    'ELECTRICAL': [
+      {
+        'title': 'MECHATRONICS',
+        'description': 'Basics of electrical systems.',
+        'programCode': '(R2/523/4/0245) (07/25) (MQA/FA 14611)',
+        'studyMode': 'Full Time',
+        'fee': 'RM 33,324',
+        'duration': '6 Semester / 3 Years',
+        'image': 'asset/images/Mechatronics-PLC-9-3.webp',
+      },
+      {
+        'title': 'ELECTRONICS & INFORMATION TECHNOLOGY',
+        'description': 'Advanced electrical engineering concepts.',
+        'programCode': '(R2/523/4/0246) (07/25) (MQA/FA 14613)',
+        'studyMode': 'Full Time',
+        'fee': 'RM 33,324',
+        'duration': '6 Semester / 3 Years',
+        'image': 'asset/images/eit.webp',
+      },
+      {
+        'title': 'SUSTAINABLE ENERGY & POWER DISTRIBUTION',
+        'description': 'Advanced electrical engineering concepts.',
+        'programCode': '(R2/522/4/0017) (10/27) (MQA/FA 1410)',
+        'studyMode': 'Full Time',
+        'fee': 'RM 33,324',
+        'duration': '6 Semester / 3 Years',
+        'image':
+            'asset/images/sustainable-energy-storage-and-distribution.webp',
+      },
+      {
+        'title': 'PROCESS INSTRUMENTATION & CONTROL',
+        'description': 'Advanced electrical engineering concepts.',
+        'programCode': '(R2/523/4/0244) (07/25) (MQA/FA 14612)',
+        'studyMode': 'Full Time',
+        'fee': 'RM 33,324',
+        'duration': '6 Semester / 3 Years',
+        'image': 'asset/images/PROCESS-INSTRUMENTATION-CONTROL.webp',
+      },
+      {
+        'title': 'AUTOTRONICS ENGINEERING TECHNOLOGY',
+        'description': 'Advanced electrical engineering concepts.',
+        'programCode': '(R2/0741/4/0009) (12/29) (MQA/FA 4936)',
+        'studyMode': 'Full Time',
+        'fee': 'RM 33,324',
+        'duration': '6 Semester / 3 Years',
+        'image': 'asset/images/auto.webp',
+      },
+    ],
+    'MECHANICAL': [
+      {
+        'title': 'PRECISION TOOLING ENGINEERING TECHNOLOGY',
+        'description': 'Introduction to mechanics and dynamics.',
+        'programCode': '(R2/0714/4/0013) (10/25) (A 5005)',
+        'studyMode': 'Full Time',
+        'fee': 'RM 33,324',
+        'duration': '6 Semester / 3 Years',
+        'image': 'asset/images/CONVENTIONAL-MILLING-13-1536x1024.webp',
+      },
+      {
+        'title': 'INDUSTRIAL DESIGN',
+        'description': 'Introduction to mechanics and dynamics.',
+        'programCode': '(R/521/4/0103) (02/25) (MQA/FA 4785)',
+        'studyMode': 'Full Time',
+        'fee': 'RM 33,324',
+        'duration': '6 Semester / 3 Years',
+        'image': 'asset/images/IDE-25-scaled.webp',
+      },
+      {
+        'title': 'INDUSTRIAL QUALITY ENGINEERING',
+        'description': 'Introduction to mechanics and dynamics.',
+        'programCode': '(R/0741/4/0001) (10/28) (MQA/FA 10032)',
+        'studyMode': 'Full Time',
+        'fee': 'RM 33,324',
+        'duration': '6 Semester / 3 Years',
+        'image': 'asset/images/CMM-1-1536x1025.webp',
+      },
+      {
+        'title': 'INNOVATIVE PRODUCT DESIGN',
+        'description': 'Introduction to mechanics and dynamics.',
+        'programCode': '(R2/0741/4/0006) (01/26) (A 7165)',
+        'studyMode': 'Full Time',
+        'fee': 'RM 33,324',
+        'duration': '6 Semester / 3 Years',
+        'image': 'asset/images/TDT-5-scaled.webp',
+      },
+      {
+        'title': 'CNC PRECISION TECHNOLOGY',
+        'description': 'Introduction to mechanics and dynamics.',
+        'programCode': '(R3/521/4/0232) (12/27) (MQA/FA 14870)',
+        'studyMode': 'Full Time',
+        'fee': 'RM 33,324',
+        'duration': '6 Semester / 3 Years',
+        'image': 'asset/images/DMG-CNC-STUDENT-2-scaled.webp',
+      },
+      {
+        'title': 'MACHINE TOOL MAINTENANCE',
+        'description': 'Introduction to mechanics and dynamics.',
+        'programCode': '(R2/0741/4/0008) (12/29) (MQA/FA 4786)',
+        'studyMode': 'Full Time',
+        'fee': 'RM 33,324',
+        'duration': '6 Semester / 3 Years',
+        'image': 'asset/images/MTM07_GMI.webp',
+      },
+      {
+        'title': 'MANUFACTURING SYSTEM',
+        'description': 'Introduction to mechanics and dynamics.',
+        'programCode': '(R2/521/4/0049) (02/28) (MQA/FA 14871)',
+        'studyMode': 'Full Time',
+        'fee': 'RM 33,324',
+        'duration': '6 Semester / 3 Years',
+        'image': 'asset/images/Flexible-Manufacturing-System-4-1536x1025.webp',
+      },
+    ],
+    'COMPUTER': [
+      {
+        'title': 'SOFTWARE ENGINEERING',
+        'description': 'Introduction to programming and algorithms.',
+        'programCode': '(R/481/4/0803) (03/28) (MQA/FA 9541)',
+        'studyMode': 'Full Time',
+        'fee': 'RM 30,000',
+        'duration': '6 Semester / 3 Years',
+        'image': 'asset/images/SET-15-1536x1024.webp',
+      },
+      {
+        'title': 'CYBER SECURITY TECHNOLOGY',
+        'description': 'Introduction to programming and algorithms.',
+        'programCode': '(R2/0613/4/0043) (07/26) (MQA/FA 15748)',
+        'studyMode': 'Full Time',
+        'fee': 'RM 30,000',
+        'duration': '6 Semester / 3 Years',
+        'image': 'asset/images/CYBER-BATTLEFIELD-9-1536x1025.webp',
+      },
+      {
+        'title': 'CREATIVE MULTIMEDIA',
+        'description': 'Introduction to programming and algorithms.',
+        'programCode': '(R/213/4/0272) (07/25) (MQA/FA 6035)',
+        'studyMode': 'Full Time',
+        'fee': 'RM 30,000',
+        'duration': '6 Semester / 3 Years',
+        'image': 'asset/images/CRM-6.webp',
+      },
+    ],
+  };
+}
