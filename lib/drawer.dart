@@ -37,8 +37,8 @@ class HamburgerMenu extends StatelessWidget {
         Get.put(HamburgerMenuController());
 
     List<Widget> widgetOptions = <Widget>[
-      const HomeScreen(),
-      const EligibilityCheckerScreen(),
+      const Programmes(),
+      EligibilityCheckerScreen(),
       const EnquiryScreen(),
     ];
 
@@ -49,6 +49,7 @@ class HamburgerMenu extends StatelessWidget {
         //   'asset/images/logo-gmi-header.webp',
         //   height: 40, // Adjust the height as needed
         //   fit: BoxFit.contain, // Ensure the aspect ratio is maintained
+
         title: Obx(
           () => Text(
             controller.appBarTitle.value,
@@ -68,10 +69,10 @@ class HamburgerMenu extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: Center(
-        // Use Obx to react to changes in the selectedIndex
-        child: Obx(() => widgetOptions[controller.selectedIndex.value]),
-      ),
+      body:
+          // Use Obx to react to changes in the selectedIndex
+          Obx(() => widgetOptions[controller.selectedIndex.value]),
+
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -102,41 +103,47 @@ class HamburgerMenu extends StatelessWidget {
                   ),
                 )),
             // Business ListTile
-            Obx(() => Container(
-                  decoration: const BoxDecoration(
-                      border: Border(
-                          bottom: BorderSide(
-                              color: Color.fromARGB(108, 158, 158, 158)))),
-                  child: ListTile(
-                    leading: const Icon(Icons.check_rounded),
-                    title: Text('ELIGIBILITY CHECKER',
-                        style: GoogleFonts.roboto(
-                            fontSize: 15, fontWeight: FontWeight.bold)),
-                    selected: controller.selectedIndex.value == 1,
-                    onTap: () {
-                      controller.updateIndex(1); // Update index and title
-                      Get.back(); // Close the drawer
-                    },
-                  ),
-                )),
+            Obx(
+              () => Container(
+                decoration: const BoxDecoration(
+                    border: Border(
+                        bottom: BorderSide(
+                            color: Color.fromARGB(108, 158, 158, 158)))),
+                child: ListTile(
+                  leading: const Icon(Icons.check_rounded),
+                  title: Text('ELIGIBILITY CHECKER',
+                      style: GoogleFonts.roboto(
+                          fontSize: 15, fontWeight: FontWeight.bold)),
+                  selected: controller.selectedIndex.value == 1,
+                  onTap: () {
+                    controller.updateIndex(1); // Update index and title
+                    Get.back(); // Close the drawer
+                  },
+                ),
+              ),
+            ),
             // School ListTile
-            Obx(() => Container(
-                  decoration: const BoxDecoration(
-                      border: Border(
-                          bottom: BorderSide(
-                              color: Color.fromARGB(108, 158, 158, 158)))),
-                  child: ListTile(
-                    leading: const Icon(Icons.question_answer_rounded),
-                    title: Text('ENQUIRY',
-                        style: GoogleFonts.roboto(
-                            fontSize: 15, fontWeight: FontWeight.bold)),
-                    selected: controller.selectedIndex.value == 2,
-                    onTap: () {
-                      controller.updateIndex(2); // Update index and title
-                      Get.back(); // Close the drawer
-                    },
+            Obx(
+              () => Container(
+                decoration: const BoxDecoration(
+                  border: Border(
+                    bottom:
+                        BorderSide(color: Color.fromARGB(108, 158, 158, 158)),
                   ),
-                )),
+                ),
+                child: ListTile(
+                  leading: const Icon(Icons.question_answer_rounded),
+                  title: Text('ENQUIRY',
+                      style: GoogleFonts.roboto(
+                          fontSize: 15, fontWeight: FontWeight.bold)),
+                  selected: controller.selectedIndex.value == 2,
+                  onTap: () {
+                    controller.updateIndex(2); // Update index and title
+                    Get.back(); // Close the drawer
+                  },
+                ),
+              ),
+            ),
           ],
         ),
       ),
