@@ -1,16 +1,48 @@
-# gmi_mobile_app
+<h1>📱 GMI Mobile App</h1>
 
-A new Flutter project.
+<p>Welcome to <strong>GMI Mobile App</strong> – a Flutter application designed to 
+Application promoting courses offered in GMI for possible prospect to further their studies in Higher Education.</p>
 
-## Getting Started
+<hr>
 
-This project is a starting point for a Flutter application.
+<h2>🌟 Main Features</h2>
+<ul>
+  <li><strong>Checker</strong>: Shows list of course.</li>
+  <li><strong>Enquiry</strong>: Eligibility Checker based on prospect results.</li>
+</ul>
 
-A few resources to get you started if this is your first Flutter project:
+<hr>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<h2>🚀 Getting Started</h2>
+<h3>Prerequisites</h3>
+<ul>
+  <li><a href="https://docs.flutter.dev/get-started/install">Flutter SDK</a> (vX.X.X or higher)</li>
+  <li><a href="https://developer.android.com/studio">Android Studio</a> or 
+      <a href="https://code.visualstudio.com/">Visual Studio Code</a> with Flutter & Dart plugins</li>
+  <li>A connected device (physical or emulator)</li>
+</ul>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<hr>
+
+<h2>🛠 Tech Stack</h2>
+<ul>
+  <li><strong>Framework:</strong> Flutter</li>
+  <li><strong>Language:</strong> Dart</li>
+</ul>
+
+<hr>
+
+<h2>📚 Resources</h2>
+<p>Here are a few resources to help you get started with Flutter:</p>
+<ul>
+  <li><a href="https://docs.flutter.dev/">Flutter Documentation</a></li>
+  <li><a href="https://docs.flutter.dev/get-started/codelab">Write Your First Flutter App</a></li>
+  <li><a href="https://docs.flutter.dev/cookbook">Flutter Cookbook</a> - Useful Flutter samples and recipes</li>
+</ul>
+
+<hr>
+
+<hr>
+
+<h2>🙏 Acknowledgements</h2>
+<p>Thanks to the <a href="https://flutter.dev/">Flutter team</a> and the open-source community for providing such an amazing framework.</p>
