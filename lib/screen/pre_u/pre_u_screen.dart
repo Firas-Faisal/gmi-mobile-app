@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gmi_mobile_app/screen/home/controller/pre_u_controller.dart';
-import 'package:gmi_mobile_app/screen/home/widget/gapp.dart';
-import 'package:gmi_mobile_app/screen/home/widget/gufp.dart';
+import 'package:gmi_mobile_app/screen/pre_u/controller/pre_u_controller.dart';
+import 'package:gmi_mobile_app/screen/gapp/gapp_screen.dart';
+import 'package:gmi_mobile_app/screen/gufp/gufp_screen.dart';
 
 class PreUTab extends StatelessWidget {
   PreUTab({super.key});

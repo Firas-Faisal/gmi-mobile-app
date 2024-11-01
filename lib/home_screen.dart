@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gmi_mobile_app/screen/diploma/diploma_screen.dart';
-import 'package:gmi_mobile_app/pre_u/pre_u_screen.dart';
+import 'package:gmi_mobile_app/screen/pre_u/pre_u_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
