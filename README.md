@@ -13,17 +13,6 @@ Application promoting courses offered in GMI for possible prospect to further th
 
 <hr>
 
-<h2>🚀 Getting Started</h2>
-<h3>Prerequisites</h3>
-<ul>
-  <li><a href="https://docs.flutter.dev/get-started/install">Flutter SDK</a> (vX.X.X or higher)</li>
-  <li><a href="https://developer.android.com/studio">Android Studio</a> or 
-      <a href="https://code.visualstudio.com/">Visual Studio Code</a> with Flutter & Dart plugins</li>
-  <li>A connected device (physical or emulator)</li>
-</ul>
-
-<hr>
-
 <h2>🛠 Tech Stack</h2>
 <ul>
   <li><strong>Framework:</strong> Flutter</li>
