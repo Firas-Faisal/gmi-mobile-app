@@ -42,7 +42,5 @@ Application promoting courses offered in GMI for possible prospect to further th
 
 <hr>
 
-<hr>
-
 <h2>🙏 Acknowledgements</h2>
 <p>Thanks to the <a href="https://flutter.dev/">Flutter team</a> and the open-source community for providing such an amazing framework.</p>
