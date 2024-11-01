@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gmi_mobile_app/screen/checker/checker.dart';
+import 'package:gmi_mobile_app/screen/checker/check_spm_screen.dart';
 import 'package:gmi_mobile_app/screen/enquiry/enquiry.dart';
-import 'package:gmi_mobile_app/screen/home/home.dart';
+import 'package:gmi_mobile_app/home_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HamburgerMenuController extends GetxController {
@@ -37,8 +37,8 @@ class HamburgerMenu extends StatelessWidget {
         Get.put(HamburgerMenuController());
 
     List<Widget> widgetOptions = <Widget>[
-      const Programmes(),
-      EligibilityCheckerScreen(),
+      const HomeScreen(),
+      SPMChecker(),
       const EnquiryScreen(),
     ];
 

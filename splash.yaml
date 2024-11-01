@@ -1,7 +1,7 @@
 flutter_native_splash:
-  color: "#FFFFFF"
-  image: asset/images/splashlogo-gmi-header.png
+  color: "#FFFFFF"  # Background color of the splash screen
+  image: asset/images/logogmi.png  # Path to your splash image
   android_12:
     color: "#FFFFFF"
-    image: asset/images/splashlogo-gmi-header.png
-  web: false
+    image: asset/images/logogmi.png  # Use the same splash image for Android 12
+  web: false  # Set to true if you plan to support web
