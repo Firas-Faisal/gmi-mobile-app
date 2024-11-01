@@ -7,8 +7,8 @@ Application promoting courses offered in GMI for possible prospect to further th
 
 <h2>🌟 Main Features</h2>
 <ul>
-  <li><strong>Checker</strong>: Shows list of course.</li>
-  <li><strong>Enquiry</strong>: Eligibility Checker based on prospect results.</li>
+  <li><strong>Course</strong>: Shows list of course.</li>
+  <li><strong>Checker</strong>: Eligibility Checker based on prospect results.</li>
 </ul>
 
 <hr>
