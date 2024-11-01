@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:gmi_mobile_app/screen/home/widget/diploma_tab.dart';
-import 'package:gmi_mobile_app/screen/home/widget/pre_u_tab.dart';
+import 'package:gmi_mobile_app/screen/diploma/diploma_screen.dart';
+import 'package:gmi_mobile_app/pre_u/pre_u_screen.dart';
 
-class Programmes extends StatelessWidget {
-  const Programmes({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class Programmes extends StatelessWidget {
               child: TabBarView(
                 children: [
                   DiplomaTab(), // No const here since it's a StatefulWidget
-                  const PreUTab(),
+                  PreUTab(),
                 ],
               ),
             ),

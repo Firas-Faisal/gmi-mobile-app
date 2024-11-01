@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart'; // Import Flutter Material package for UI components.
 import 'package:get/get.dart'; // Import GetX for state management and dependency injection.
-import 'package:gmi_mobile_app/screen/home/controller/diploma_controller.dart'; // Import the DiplomaController for managing application state.
+import 'package:gmi_mobile_app/screen/home/controller/diploma_controller.dart';
 import 'package:gmi_mobile_app/screen/home/widget/course_card.dart'; // Import the CourseCard widget to display course information.
 
 class DiplomaTab extends StatelessWidget {
@@ -67,7 +67,9 @@ class DiplomaTab extends StatelessWidget {
                       'studyMode']!, // Study mode (e.g., online, offline).
                   fee: course['fee']!, // Fee for the course.
                   duration: course['duration']!, // Duration of the course.
-                  image: course['image']!, // Image associated with the course.
+                  image: course['image']!,
+                  readMoreUrl: course[
+                      'readMoreUrl'], // Image associated with the course.
                 );
               },
             );

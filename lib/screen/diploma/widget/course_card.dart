@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class CourseCard extends StatelessWidget {
   final String title;
@@ -8,6 +9,8 @@ class CourseCard extends StatelessWidget {
   final String fee;
   final String duration;
   final String image;
+  final String? applyUrl; // URL for APPLY NOW
+  final String? readMoreUrl; // URL for READ MORE
 
   const CourseCard({
     super.key,
@@ -18,6 +21,8 @@ class CourseCard extends StatelessWidget {
     required this.fee,
     required this.duration,
     required this.image,
+    this.applyUrl,
+    this.readMoreUrl,
   });
 
   @override
@@ -40,7 +45,7 @@ class CourseCard extends StatelessWidget {
                 topRight: Radius.circular(12.0),
               ),
               image: DecorationImage(
-                image: AssetImage(image), // Use the dynamic image
+                image: AssetImage(image),
                 fit: BoxFit.cover,
               ),
             ),
@@ -65,27 +70,10 @@ class CourseCard extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      ElevatedButton(
-                        onPressed: () {
-                          // Add your action here
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFFFF0000),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10.0),
-                          ),
-                        ),
-                        child: const Text(
-                          'APPLY NOW',
-                          style: TextStyle(color: Colors.black),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
                       const SizedBox(width: 10.0),
                       ElevatedButton(
-                        onPressed: () {
-                          // Add your action here
-                        },
+                        onPressed: () =>
+                            _launchUrl(readMoreUrl), // Read More URL
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFF005BBB),
                           shape: RoundedRectangleBorder(
@@ -136,5 +124,22 @@ class CourseCard extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  // Function to launch URLs for both buttons
+  Future<void> _launchUrl(String? urlString) async {
+    if (urlString == null || urlString.isEmpty) {
+      debugPrint('Invalid URL');
+      return;
+    }
+
+    final Uri url = Uri.parse(urlString);
+
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url);
+    } else {
+      debugPrint('Could not launch $urlString');
+      throw Exception('Could not launch $urlString');
+    }
   }
 }
